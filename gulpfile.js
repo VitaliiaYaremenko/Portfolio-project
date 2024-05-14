@@ -22,14 +22,6 @@ function compileStyles() {
         'app/scss/style.scss'
     ])
         .pipe(scss({ outputStyle: 'compressed' }).on('error', scss.logError))
-        // .pipe(postcss([
-        //     url({
-        //         url: 'copy',
-        //         assetsPath: path.join(__dirname, 'build/images'),
-        //         useHash: true,
-        //         basePath: path.join(__dirname, 'app')
-        //     })
-        // ]))
         .pipe(autoprefixer({ overrideBrowserslist: ['last 3 versions'] }))
         .pipe(concat('style.min.css'))
         .pipe(dest('app/css/'))
