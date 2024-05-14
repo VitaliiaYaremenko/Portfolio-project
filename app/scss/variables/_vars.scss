@@ -1,0 +1,29 @@
+$main-regular: #323264;
+$main-alt: #46466e;
+$main-soft: #686887;
+$accent-color: #f0145a;
+$active-regular: #24a3ff;
+$active-hover: #0085ff;
+$active-active: #006ccf;
+$grey-bg: #f5f5fa;
+$grey-bg-alt: #ededf7;
+$grey-text: #b3b3ba;
+$grey-separator: #e6e6f0;
+$basic-black: #000;
+$basic-white: #fff;
+$gradient-regular: linear-gradient(135deg, #323264 0%, #323264 73.96%, #a54b5f 100%);
+$gradient-soft: linear-gradient(23deg, #323264 0%, #323264 50.63%, #7a425e 100%);
+$gradient-red: linear-gradient(310deg, #f0145a 0%, #693264 100%);
+$gradient-super-soft: linear-gradient(208deg, #323264 0%, #323264 59.9%, #643e72 100%);
+$gradient-red-text: linear-gradient(298deg, #f0145a 0%, #ef8080 100%);
+$bg-rgba: rgba(245, 245, 250, 0.20);
+$border-color: rgba(255, 255, 255, 0.50);
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-rounded: 50%;
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+$breakpoint-xxl: 1920px;

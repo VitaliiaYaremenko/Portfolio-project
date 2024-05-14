@@ -1,0 +1,114 @@
+.header {
+  .secondary-bg {
+    background: $grey-bg;
+    @media screen and (min-width: $breakpoint-md) {
+      background: transparent;
+    }
+  }
+  .grey-text {
+    color:$grey-text;
+  }
+
+  .pd-bottom {
+    padding-bottom: 5px;
+  }
+
+
+  .active-regular-color {
+    color: $active-regular;
+  }
+
+  .white-hover-border {
+    &:hover {
+      border-bottom: 2px solid $basic-white;
+      transition: fill .3s linear;
+    }
+  }
+  .accent-color-border {
+    @media screen and (min-width: $breakpoint-md) {
+      color: $accent-color;
+      border-bottom: 2px solid $accent-color;
+    }
+  }
+
+  .accent-fill-icons {
+    transition: fill .3s linear;
+    &:hover {
+      fill:$accent-color;
+    }
+  }
+
+}
+.accent-color-hover {
+  &:hover {
+    border: 1px solid $accent-color;
+    &:before {
+      border-bottom: 2px solid $accent-color;
+      border-left: 2px solid $accent-color;
+    }
+  }
+}
+
+.bg-grey-rgba {
+  &:hover {
+    background-color: $bg-rgba;
+  }
+}
+
+.link-accent-hover {
+  transition: fill .3s linear;
+  &:hover {
+    color:$accent-color ;
+  }
+
+  .white--bg {
+    background: $grey-bg;
+  }
+}
+
+
+
+.footer {
+  .border-none {
+    border-top: none;
+  }
+}
+
+
+.link--accent {
+  @media screen and (min-width: $breakpoint-md) {
+    &.active {
+      color: $accent-color;
+    }
+  }
+}
+
+
+.bg--item {
+  &:hover{
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 8px;
+    padding: 5px 7px;
+  }
+}
+
+.logo--color {
+  color:$main-regular;
+}
+
+.text--grey {
+  color: $grey-text;
+}
+
+.bg--icon {
+  fill:$grey-text;
+}
+
+
+
+
+.link--regular {
+  @media screen and (min-width: $breakpoint-md) {
+    color: $main-regular;
+  }
+}

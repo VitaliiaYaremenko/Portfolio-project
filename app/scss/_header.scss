@@ -1,0 +1,195 @@
+.head {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background: url('../images/headers-logo/primary-header-symbol.svg') no-repeat center/auto 100%;
+  @media screen and (min-width: $breakpoint-md) {
+    background-size: cover;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    background-size: auto 100%;
+  }
+  &__header {
+  }
+  &__title {
+    @include title($basic-white);
+    @include flex-center;
+    text-align: center;
+  }
+
+  &__link {
+    @include width-height(42px, 42px);
+    border: 1px solid $basic-white;
+    border-radius: $radius-rounded;
+    position: relative;
+    margin: 0 auto 30px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 12px;
+      width: 14px;
+      height: 14px;
+      border-bottom: 2px solid $basic-white;
+      border-left: 2px solid $basic-white;
+      transform: rotate(-45deg);
+    }
+  }
+}
+.header {
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 50px 60px 0 60px;
+  }
+
+  &__container {
+    @media screen and (min-width: $breakpoint-lg) {
+      position: relative;
+    }
+  }
+
+  &__inner {
+    @include flex(flex, center, space-between);
+    background: $bg-rgba;
+    font-weight: 700;
+    padding: 10px 30px;
+    margin: 0 -30px 15px;
+    @media screen and (min-width: $breakpoint-md) {
+      margin: 0 0 30px;
+      padding: 0;
+      background: transparent;
+      justify-content: flex-start;
+      gap: 6px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      justify-content: flex-end;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__langs {
+    display: flex;
+  }
+
+  &__langs-item {
+  }
+
+  &__langs-link {
+    @include active-regular-link($basic-white);
+    font-size: 12px;
+    padding: 5px 7px;
+    border-radius: $radius-sm;
+    text-transform: uppercase;
+    &.active {
+      background: $accent-color;
+    }
+  }
+
+  &__address {
+    display: none;
+    @media screen and (min-width: $breakpoint-md) {
+      color: $grey-text;
+      display: block;
+      font-weight: 400;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      color: $basic-white;
+    }
+  }
+
+  &__phone {
+    color: $basic-white;
+    text-decoration: none;
+  }
+
+  &__social {
+    display: none;
+    @media screen and (min-width: $breakpoint-md) {
+      display: block;
+    }
+  }
+
+  &__facebook-icon {
+    @include width-height(24px, 24px);
+    fill: $basic-white;
+  }
+
+  &__box {
+    @include flex(flex, center, space-between);
+    @media screen and (min-width: $breakpoint-md) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__box-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    color: $basic-white;
+    text-decoration: none;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAxMiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IkFzc2V0cyAvIFNsYXNoIj4KPHBhdGggaWQ9IlNsYXNoIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTguNzI4MjcgMEgxMS45NTA1TDMuNTU1NzQgMjZIMC4zMzM0OTZMOC43MjgyNyAwWiIgZmlsbD0iI0YwMTQ1QSIvPgo8L2c+Cjwvc3ZnPgo=");
+    background-repeat: no-repeat;
+    background-position: 75px 50%;
+    background-size: auto 26px;
+    @media screen and (min-width: $breakpoint-md) {
+      background-position: 130px 50%;
+      background-size: 21px 47px;
+    }
+
+    img {
+      @include width-height(70px, 32px);
+      @media screen and (min-width: $breakpoint-md) {
+        @include width-height(130px, 60px);
+      }
+    }
+
+    span {
+      @media screen and (min-width: $breakpoint-md) {
+        @include size-weight(36px, 400);
+      }
+    }
+  }
+
+  &__box-burger {
+    @include width-height(24px, 18px);
+    cursor: pointer;
+    position: relative;
+    @media screen and (min-width: $breakpoint-md) {
+      display: none;
+    }
+    &::before, &::after, span {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: $basic-white;
+    }
+    &::after {
+      top: auto;
+      bottom: 0;
+    }
+    span {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.burger--bg {
+  &::before, &::after, span {
+    background: $main-regular;
+  }
+}
+
+
+

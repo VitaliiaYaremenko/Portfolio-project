@@ -1,0 +1,62 @@
+.articles {
+
+  &__radio {
+    padding-top: 30px;
+  }
+
+  &__radio-container {
+    @include width-height(233px, 42px);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    background: $grey-separator;
+    border-radius: $radius-md;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.radio {
+
+  &__tab {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__body {
+    color: $main-regular;
+    @include size-weight(16px, 700);
+    align-items: center;
+  }
+
+  &__tab + &__body {
+    @include flex-center;
+    cursor: pointer;
+  }
+
+  &__tab ~ span {
+    position: absolute;
+    content: '';
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    height: 38px;
+    z-index: -1;
+    background: $basic-white;
+    border-radius: $radius-md;
+    transform: translateX(calc(100% - 4px));
+    transition: .3s linear;
+
+    &:hover {
+      background:$grey-bg;
+    }
+  }
+
+  &__tab:checked + label + input + label + span {
+    transform: translateX(0);
+  }
+}

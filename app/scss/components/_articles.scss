@@ -1,0 +1,91 @@
+.publication-articles {
+  background-color: $grey-bg;
+
+  &__container {
+    margin-top: 30px;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: $breakpoint-md) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.articles {
+
+  &__cards {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+}
+
+.card {
+  background-color: $basic-white;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    flex: 1 1 40%;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $breakpoint-lg){
+    flex: 1 1 30%;
+  }
+
+  &__photo {
+    @include global-image;
+    border-top-left-radius: $radius-sm;
+    border-top-right-radius: $radius-sm;
+  }
+
+  &__content {
+    padding: 30px;
+  }
+
+  &__title {
+    @include active-regular-link($active-regular);
+    @include size-weight(16px, 700);
+    margin-bottom: 15px;
+  }
+
+  &__data {
+    @include size-weight(12px, 700);
+  }
+
+  &__new {
+    @include style-text(400, 14px, 157%);
+    position: relative;
+    padding-top: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      border-bottom: 4px solid $grey-separator;
+    }
+  }
+}
+
+.card-mb-bott-zero {
+  margin-bottom: 0;
+}
+
+.card-pd-bott-zero {
+  padding-bottom: 0;
+}

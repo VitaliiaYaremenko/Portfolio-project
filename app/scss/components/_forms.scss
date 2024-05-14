@@ -1,0 +1,65 @@
+.form {
+  background: $grey-bg;
+  border-radius: $radius-md;
+  margin-bottom: 30px;
+  padding: 30px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    flex: 1 1 40%;
+  }
+
+  &__title {
+    @include primary-title;
+    @include main-gradient-text($gradient-red-text);
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    @include size-weight(14px, 700);
+    color:$grey-text;
+    letter-spacing: 0.07em;
+    margin-bottom: 15px;
+
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
+
+
+.form-user {
+
+  &__massage,
+  &__data {
+    margin-bottom: 30px;
+  }
+
+  &__data {
+  }
+}
+
+.user-massage {
+
+  &__input,
+  &__text {
+    @include global-inputs-styles;
+  }
+
+  &__input {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    height: 130px;
+    @media screen and (min-width: $breakpoint-md) {
+      max-width: 1000px;
+      min-width: 400px;
+      resize: vertical;
+    }
+  }
+}

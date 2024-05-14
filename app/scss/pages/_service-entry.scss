@@ -1,0 +1,83 @@
+.ecommerce {
+  margin-bottom: 30px;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-bottom: 60px;
+  }
+
+
+  &__container {
+    text-align: center;
+  }
+
+  &__card {
+    margin-bottom: 28px;
+  }
+
+  &__card-icon {
+    @include width-height(92px, 92px);
+    fill: $basic-white;
+    margin-bottom: 28px;
+  }
+
+  &__card-desc {
+    @include style-text(400, 19px, 30px);
+    color: $basic-white;
+    margin-bottom: 28px;
+  }
+}
+
+.ecommerce {
+
+  &__card-title {
+    @include main-gradient-text($gradient-red-text);
+    @include size-weight(30px, 700);
+    margin-bottom: 28px;
+  }
+}
+
+.service-area {
+
+  &__title {
+    @include size-weight(22px, 700);
+    color: $basic-white;
+    border-top: 4px solid $border-color;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.area {
+
+  &__item {
+    :nth-child(4) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      columns: 2;
+      :nth-child(4) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__list {
+    color: $basic-white;
+    font-size: 18px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      @include width-height(6px, 6px);
+      top: 8px;
+      left: 0;
+      background: $accent-color;
+      border-radius: $radius-rounded;
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+      flex: 1 1 35%;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.footer {
+  background: $grey-bg;
+
+  &__container {
+    padding-bottom: 30px;
+  }
+
+  &__content {
+    text-align: center;
+    border-top: 2px solid $grey-separator;
+    @media screen and (min-width: $breakpoint-lg) {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: start;
+    }
+  }
+
+  &__info {
+    padding-top: 30px ;
+    @media screen and (min-width: $breakpoint-md) {
+      @include flex-center;
+      gap: 10px;
+      margin-bottom: 21px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      @include flex(flex, center, flex-start);
+      gap: 5px;
+      order: 1;
+      flex: 1 1 50%;
+      margin-bottom: 21px;
+    }
+  }
+
+  &__info-address {
+    @include size-weight(16px, 400);
+    color: $main-regular;
+    margin-bottom: 10px;
+    @media screen and (min-width: $breakpoint-md) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__info-nav {
+    @include size-weight(12px, 700);
+    @include active-regular-link($active-regular);
+    text-transform: uppercase;
+    margin-bottom: 21px;
+    @media screen and (min-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contact {
+    @media screen and (min-width: $breakpoint-md) {
+      @include flex-center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      order: 3;
+      flex: 1 1 100%;
+    }
+  }
+
+  &__facebook {
+    margin-bottom: 10px;
+    display: block;
+    @media screen and (min-width: $breakpoint-md){
+      padding-bottom: 0;
+    }
+  }
+
+  &__facebook-icon {
+    @include width-height(38px, 38px);
+    fill: $active-regular;
+    transition: fill .3s linear;
+    @media screen and (min-width: $breakpoint-xl){
+      &:hover {
+        fill: $accent-color;
+      }
+    }
+  }
+
+  &__phone {
+    @include size-weight(16px, 700);
+    @include active-regular-link($main-alt);
+    margin-bottom: 10px;
+    position: relative;
+    @media screen and (min-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__mail {
+    @include size-weight(16px, 700);
+    @include active-regular-link($active-regular);
+    margin-bottom: 30px;
+    transition: color .3s linear;
+    @media screen and (min-width: $breakpoint-md){
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $breakpoint-xl){
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+
+  &__data {
+    @include size-weight(16px, 400);
+    color: $grey-text;
+    text-align: center;
+    text-transform: uppercase;
+    @media screen and (min-width: $breakpoint-lg) {
+      order: 2;
+      margin-top: 30px;
+    }
+  }
+}
+

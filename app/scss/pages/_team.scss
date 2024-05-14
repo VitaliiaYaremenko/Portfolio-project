@@ -1,0 +1,105 @@
+.team {
+
+  &__global {
+    margin-bottom: 60px;
+  }
+
+  &__global-title {
+    @include primary-title;
+    @include main-gradient-text($gradient-red-text);
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $breakpoint-md) {
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      padding: 0 120px 0;
+    }
+  }
+}
+
+.cards {
+  &__people {
+    @media screen and (min-width: $breakpoint-md){
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+  }
+}
+.card {
+  &__people {
+    margin-bottom: 30px;
+    @media screen and (min-width: $breakpoint-md){
+      margin-bottom: 0;
+      flex: 1 1 40%;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      flex: 1 1 25%;
+    }
+  }
+
+  &__people-img {
+    @include global-image;
+    border-radius: $radius-md;
+    margin-bottom: 15px;
+  }
+
+  &__people-info {
+    padding-right: 50px;
+    position: relative;
+  }
+
+  &__people-title {
+    @include active-regular-link($main-regular);
+    font-weight: 700;
+    @media screen and (min-width: $breakpoint-xxl) {
+      &:hover {
+        color: $accent-color;
+        transition: all .3s ease-in;
+      }
+    }
+  }
+
+  &__people-subtitle {
+    color: $grey-text;
+    line-height: 22px;
+    padding-top: 5px;
+  }
+
+  &__people-link {
+    display: block;
+    position: absolute;
+    @include width-height(32px, 32px);
+    top: 0;
+    right: 0;
+    border-radius: $radius-rounded;
+    background: $grey-bg;
+
+    &::before {
+      content: '';
+      position: absolute;
+      @include width-height(10px, 10px);
+      top: 10px;
+      left: 7px;
+      border-bottom: 2px solid $active-regular;
+      border-left: 2px solid $active-regular;
+      transform: rotate(-130deg);
+      transition: all .4s ease-in;
+    }
+    &:hover {
+      transform: rotate(-95deg);
+      transition: all .4s ease-in;
+    }
+
+    @media screen and (min-width: $breakpoint-xxl) {
+      &:hover {
+        color: $accent-color;
+        transform: rotate(-95deg);
+      }
+      &:hover::before {
+        border-color: $accent-color;
+      }
+    }
+  }
+}

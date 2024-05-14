@@ -1,0 +1,150 @@
+.publication-news {
+
+  &__container {
+    margin-bottom: 60px;
+  }
+}
+
+.news-description {
+  &__img {
+    @include global-image;
+    border-radius: $radius-md;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include size-weight(20px, 700);
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 30px;
+    }
+  }
+
+  &__link {
+    @include active-regular-link($main-regular);
+  }
+
+  &__data {
+    @include size-weight(12px, 700);
+    padding-bottom: 30px;
+  }
+
+  &__text {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.news-content {
+  &__title {
+    @include primary-title;
+    @include main-gradient-text ($gradient-red-text);
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    @include active-regular-link($main-regular);
+    @include size-weight(16px, 700);
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 22px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    @include width-height(20px, 20px);
+    fill: $accent-color;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__post {
+    max-width: 315px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $breakpoint-md) {
+      max-width: 640px;
+    }
+  }
+
+  &__post-img {
+    @include global-image;
+    margin-bottom: 15px;
+  }
+
+  &__post-text {
+    @include style-text(400, 14px,157%);
+    color:$grey-text;
+    margin-bottom: 30px;
+  }
+}
+
+.news-networks {
+
+  &__item {
+    padding-top: 30px;
+    display: flex;
+    gap: 10px;
+
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      border-bottom: 4px solid $grey-separator;
+    }
+  }
+
+  &__list {
+    padding: 9px;
+    border-radius: $radius-md;
+    background-color: $grey-bg;
+    transition: color .3s linear;
+
+    &:hover {
+      background-color: $grey-bg-alt;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__icon {
+    @include width-height(24px, 24px);
+  }
+}
+
+.icon-facebook {
+  fill:$main-regular;
+}
+
+.icon--telegram {
+  fill: #3CACDC;
+}
+.icon--in {
+  fill: #1178B3;
+}

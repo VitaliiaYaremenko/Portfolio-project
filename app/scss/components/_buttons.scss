@@ -1,0 +1,16 @@
+.btn {
+  @include size-weight(16px, 700);
+  color:$basic-white;
+  padding: 18px 30px;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  background: $active-regular;
+  box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.50);
+
+  &:hover {
+    background: $active-hover;
+  }
+  &:active {
+    background: $active-active;
+  }
+}

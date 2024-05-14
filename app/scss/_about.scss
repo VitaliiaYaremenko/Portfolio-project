@@ -1,0 +1,144 @@
+.about {
+  margin-bottom: 30px;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-bottom: 60px;
+  }
+
+  &__services {
+    @media screen and (min-width: $breakpoint-lg) {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}
+
+.services {
+
+  &__legal {
+    @media screen and (min-width: $breakpoint-lg) {
+      flex: 1 1 90%;
+    }
+  }
+}
+
+.legal {
+  &__title {
+    @include primary-title;
+    @include main-gradient-text($gradient-red-text);
+    margin-bottom: 28px;
+  }
+
+  &__desc {
+    color: $basic-black;
+    font-size: 19px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.statistics {
+
+  &__item {
+    padding-left: 30px;
+    border-left: 4px solid $grey-separator;
+  }
+
+  &__item-list {
+    position: relative;
+  }
+
+  &__icon {
+    @include width-height(32px, 32px);
+    fill: $accent-color;
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+
+  &__nomber {
+    @include size-weight(36px, 700);
+    @include main-gradient-text($gradient-red-text);
+    padding-left: 40px;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    margin-bottom: 40px;
+  }
+}
+
+.about {
+
+  &__team {
+    margin-bottom: 60px;
+  }
+
+  &__team-container {
+    @media screen and (min-width: $breakpoint-lg){
+      display: flex;
+      gap: 60px;
+    }
+  }
+}
+
+.team {
+  &__banner {
+    @include width-height(100%, 114px);
+    @include flex-center;
+    background-image: url('../images/about/team-backgraung.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $breakpoint-md){
+      height: 234px;
+      margin-bottom: 60px;
+    }
+    @media screen and (min-width: $breakpoint-lg){
+      height: 312px;
+    }
+    @media screen and (min-width: $breakpoint-xl){
+      height: 438px;
+    }
+    @media screen and (min-width: $breakpoint-xxl) {
+      height: 584px;
+    }
+  }
+
+  &__title {
+    color: $basic-white;
+    @include size-weight(36px, 700);
+    letter-spacing: 13px;
+    text-transform: uppercase;
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.80);
+    @media screen and (min-width: $breakpoint-md){
+      font-size: 46px;
+      letter-spacing: 63px;
+    }
+    @media screen and (min-width: $breakpoint-lg){
+      font-size: 86px;
+    }
+    @media screen and (min-width: $breakpoint-xl){
+      font-size: 96px;
+    }
+  }
+
+  &__quality {
+    flex: 1 1 90%;
+  }
+
+  &__quality-title {
+    @include main-gradient-text($gradient-red-text);
+    @include style-text(700, 38px, 46px);
+  }
+}
+
+.quality {
+
+  &__desc {
+    margin-bottom: 30px;
+    font-size: 19px;
+    line-height: 30px;
+  }
+}

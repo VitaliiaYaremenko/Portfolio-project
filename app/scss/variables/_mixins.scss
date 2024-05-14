@@ -1,0 +1,126 @@
+@mixin primary-title {
+  font-weight: 700;
+  font-size: 30px;
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 38px;
+  }
+}
+
+@mixin main-gradient-text($color) {
+  background: $color;
+  color: transparent;
+  background-clip: text;
+}
+
+@mixin main-style-text {
+  font-weight: 700;
+  font-size: 38px;
+}
+
+@mixin style-text($fw, $fz, $lh) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+}
+
+@mixin size-weight($fz, $fw){
+  font-size: $fz;
+  font-weight: $fw;
+}
+
+@mixin width-height($width, $height){
+  width: $width;
+  height: $height;
+}
+
+@mixin global-image {
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+
+@mixin flex ($display, $al-item, $jus-content){
+  display:$display ;
+  align-items: $al-item ;
+  justify-content: $jus-content ;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-colum {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+@mixin active-regular-link ($color){
+  color: $color;
+  display: block;
+  text-decoration: none;
+}
+
+@mixin base-link {
+  color: $active-regular;
+  display: inline-block;
+  text-decoration: none;
+  transition: color .3s ease-in;
+  &::before {
+    transition: border .3s ease-in;
+  }
+  &:hover {
+    color: $accent-color;
+  }
+  &:hover::before {
+    border-color: $accent-color;
+  }
+}
+
+@mixin global-inputs-styles {
+  @include style-text(400, 16px, 162%);
+  font-family: 'Montserrat', sans-serif;
+  border-radius: $radius-sm;
+  letter-spacing: 0.07em;
+  background: $basic-white;
+  color:$grey-text;
+  border: none;
+  padding: 15px;
+  width: 100%;
+
+  &:focus {
+    outline: 1px solid $active-regular;
+  }
+}
+//
+
+@mixin mobile-title ($color) {
+  color: $color;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+
+@mixin title($color) {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  color: $color;
+}
+
+@mixin subtitle($color) {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: $color;
+
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 38px;
+    line-height: 46px;
+  }
+}
+
+

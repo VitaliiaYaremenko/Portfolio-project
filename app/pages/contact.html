@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<!--=include sprite.html -->
+<!--=include header-contact.html -->
+<section class="contact">
+    <div class="container contact__container">
+        <div class="contact__content">
+            <ul class="contacts">
+                <li class="contacts__address border-btn-grey"><address>Kyiv, <br> Mechnikova str, 14</address></li>
+                <li><a class="contacts__phone" href="tel:0800211927">0800 211 927</a></li>
+                <li class="border-btn-grey"> <a class="contacts__mail" href="malito:kobzar@forstudy.space">kobzar@forstudy.space</a></li>
+                <li>
+                    <a class="contacts__social" href="#">
+                        <svg class="contacts__social-facebook">
+                            <use href="#facebook"></use>
+                        </svg>
+                        <p class="contacts__social-desc">Our page <br>on facebook</p>
+                    </a>
+                </li>
+            </ul>
+            <form class="form" action="#">
+                <h1 class="form__title">We would like to help you</h1>
+                <div class="form-user__massage">
+                    <input class="user-massage__input focus" type="text" id="name" placeholder="Name" required>
+                    <textarea class="user-massage__text" id="massege" name="message" placeholder="Message"></textarea>
+                </div>
+                <h2 class="form__subtitle">How to answer you?</h2>
+                <div class="form-user__data">
+                    <input class="user-data__phone" type="tel" name="number" pattern="\+380\d{9}" placeholder="Phone number" required>
+                    <input class="user-data__email" type="email" name="email" placeholder="Email" required>
+                </div>
+                <button class="form__button btn" type="submit">Send message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!--=include footer-secondary.html -->
+<script src="../js/main.min.js"></script>
+</body>
+</html>

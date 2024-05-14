@@ -1,0 +1,101 @@
+.header{
+  &__nav {
+    position: fixed;
+    bottom: -100%;
+    z-index: 100;
+    left: 8px;
+    right: 8px;
+    background: $basic-white;
+    border-radius: $radius-md $radius-md 0 0;
+    padding: 12px;
+    transition: bottom .2s linear;
+    &.active {
+      bottom: 0;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      position: static;
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+    }
+  }
+
+  &__nav-close {
+    @include width-height(22px, 22px);
+    cursor: pointer;
+    margin: 0 0 20px auto;
+    position: relative;
+    @media screen and (min-width: $breakpoint-md) {
+      display: none;
+    }
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: $accent-color;
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__nav-list {
+    @media screen and (min-width: $breakpoint-md) {
+      display: flex;
+      gap: 15px;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__nav-item {
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 2px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav-link {
+    @include active-regular-link($active-regular);
+    @include size-weight(24px, 700);
+    border-radius: $radius-md;
+    background:  $grey-bg;
+    padding: 7px;
+
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 16px;
+      color: $basic-white;
+      border-radius: 0;
+      background: none;
+      padding-bottom: 2px;
+    }
+    &.active {
+      color: $accent-color;
+      @media screen and (min-width: $breakpoint-md) {
+        color: $active-active;
+      }
+    }
+    &:hover {
+      background: $grey-bg-alt;
+      @media screen and (min-width: $breakpoint-md) {
+        background: none;
+      }
+    }
+    &:active {
+      background: $grey-separator;
+      @media screen and (min-width: $breakpoint-md) {
+        background: none;
+      }
+    }
+  }
+}

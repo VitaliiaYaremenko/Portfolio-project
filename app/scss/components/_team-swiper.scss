@@ -1,0 +1,107 @@
+.team {
+  padding:  0 30px;
+  margin-bottom: 60px;
+  @media screen and (min-width: $breakpoint-md) {
+    margin-bottom: 60px;
+  }
+
+
+  &__swiper {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  &__wraper {
+    align-items: center;
+  }
+
+  &__slide {
+    border-radius: $radius-md ;
+    overflow: hidden;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      display: flex;
+    }
+  }
+
+  &__image {
+    height: 500px;
+    position: relative;
+    @media screen and (min-width: $breakpoint-lg) {
+      flex: 1 0 400px;
+      height: auto;
+    }
+    img {
+      @include global-image;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__inner {
+    background: $grey-bg;
+    padding: 30px;
+    @media screen and (min-width: $breakpoint-lg) {
+      @include flex-colum;
+    }
+  }
+
+  &__inner-link {
+    @include base-link;
+    @include size-weight(14px, 700);
+    text-transform: uppercase;
+    position: relative;
+    padding-right: 10px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      top: 3px;
+      right: 0;
+      border-bottom: 2px solid $active-regular;
+      border-right: 2px solid $active-regular;
+      transform:  rotate(-45deg);
+      @media screen and (min-width: $breakpoint-lg) {
+        left: 75px;
+        top: 2px
+      }
+    }
+  }
+
+  &__inner-title {
+    @include style-text(700, 38px, 46px);
+    @include main-gradient-text($gradient-red-text);
+    margin-bottom: 30px;
+  }
+
+  &__inner-name {
+    @include size-weight(16px, 700);
+    color: $grey-text;
+
+    p+p {
+      @include size-weight(14px, 400);
+      margin-top: 6px;
+    }
+  }
+
+  &__swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 30px;
+
+    .swiper-pagination-bullet {
+      @include width-height(16px, 16px);
+      background: $active-regular;
+    }
+  }
+}
+
+.swiper {
+  @include width-height(100%, 100%);
+}

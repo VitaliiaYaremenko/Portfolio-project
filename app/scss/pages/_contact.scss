@@ -1,0 +1,95 @@
+.contact {
+
+  &__content {
+    @media screen and (min-width: $breakpoint-lg) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+  }
+}
+
+
+.contacts {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    flex: 1 1 40%;
+  }
+
+  &__address {
+    @include style-text(400, 21px, 143%);
+    color:$main-regular;
+    padding-bottom: 30px;
+  }
+
+  &__phone,
+  &__mail {
+    @include style-text(400, 21px, 143%);
+  }
+
+  &__phone {
+    @include active-regular-link($main-regular);
+    margin-top: 30px;
+  }
+
+  &__mail {
+    @include active-regular-link($active-regular);
+    margin-top: 15px;
+    padding-bottom: 30px;
+  }
+
+  &__social {
+    @include active-regular-link($active-regular);
+    position: relative;
+    letter-spacing: 0.08em;
+    padding-left: 48px;
+    margin-top: 30px;
+    transition: all .2s linear;
+
+    @media screen and (min-width: $breakpoint-xxl){
+      display: inline-block;
+
+      &:hover {
+        color: $accent-color;
+        .contacts__social-facebook {
+          transition: all .2s linear;
+          fill: $accent-color;
+        }
+      }
+    }
+  }
+
+  &__social-facebook {
+    @include width-height(38px, 38px);
+    fill: $active-regular;
+    position: absolute;
+    content: '';
+    top: -4px;
+    left: 0;
+  }
+
+  &__social-desc {
+    @include style-text(700, 12px, 133%);
+    text-transform: uppercase;
+  }
+}
+
+.user-data {
+
+  &__phone,
+  &__email {
+    @include global-inputs-styles;
+  }
+
+  &__phone {
+    margin-bottom: 15px;
+  }
+
+  &__email {
+  }
+}

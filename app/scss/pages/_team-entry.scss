@@ -1,0 +1,143 @@
+.employees {
+  margin-bottom: 60px;
+
+  &__container {
+    @media screen and (min-width: $breakpoint-md){
+      padding: 0 60px;
+    }
+  }
+}
+
+.employee-profile {
+  @media screen and (min-width: $breakpoint-md){
+    display: grid;
+    grid-template-columns: auto 300px;
+    grid-template-rows: auto;
+    gap: 30px
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    grid-template-columns: auto;
+  }
+}
+
+.profile {
+
+  &__photo {
+    width: 100%;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $breakpoint-md){
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+  }
+
+  &__img {
+    @include global-image;
+    height: 375px;
+    border-radius: $radius-md;
+
+    @media screen and (min-width: $breakpoint-xl){
+      @include width-height(400px, 100%);
+    }
+  }
+}
+
+.profile-content {
+
+  &__data {
+    @media screen and (min-width: $breakpoint-md){
+      @include flex-colum;
+    }
+  }
+
+  &__education {
+    padding-top: 30px;
+    color: $basic-black;
+    border-top: 4px solid $grey-separator;
+
+    @media screen and (min-width: $breakpoint-md){
+      grid-column: 1/3;
+      grid-row: 2;
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+      grid-column: 2 / 3;
+      grid-row: 3 / 2;
+    }
+  }
+}
+
+.data {
+
+  &__title {
+    @include main-gradient-text($gradient-red-text);
+    @include main-style-text;
+    margin-bottom: 15px;
+  }
+
+  &__nav {
+    @media screen and (min-width: $breakpoint-xl){
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__position {
+    @include style-text(400, 14px, 157%);
+    color: $grey-text;
+    margin-bottom: 10px;
+    @media screen and (min-width: $breakpoint-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__mail {
+    @include active-regular-link($active-regular);
+    margin-bottom: 10px;
+    @media screen and (min-width: $breakpoint-xl){
+      margin-bottom: 0;
+    }
+  }
+
+  &__app {
+    @include active-regular-link($active-regular);
+    margin-bottom: 30px;
+    @media screen and (min-width: $breakpoint-md){
+      margin-bottom: 0;
+    }
+  }
+}
+
+.education {
+
+  &__practice {
+    @include style-text(400, 16px, 162%);
+    margin-bottom: 30px;
+    @media screen and (min-width: $breakpoint-xl){
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__subtitle {
+    @include size-weight(14px, 700);
+    letter-spacing: 0.07em;
+    color: $main-regular;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__study {
+    margin-bottom: 30px;
+  }
+
+  &__experience {
+    @include style-text(400, 16px, 162%);
+  }
+}
