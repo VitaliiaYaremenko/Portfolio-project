@@ -47,5 +47,4 @@ Local version: 5.0.0
 ## commands:
 
 - gulp (project launch);
-- gulp sprite (creates a sprite file for icons);
-- gulp building (Project completion. Compiles all files and places them in the build folder.)
+- gulp build (Project completion. Compiles all files and places them in the build folder.)
