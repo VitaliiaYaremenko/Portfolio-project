@@ -13,7 +13,7 @@
       margin-bottom: 60px;
     }
     @media screen and (min-width: $breakpoint-lg) {
-      padding: 0 120px 0;
+      padding: 0 120px 0
     }
   }
 }
@@ -64,7 +64,7 @@
   &__people-subtitle {
     color: $grey-text;
     line-height: 22px;
-    padding-top: 5px;
+    margin-top: 5px;
   }
 
   &__people-link {

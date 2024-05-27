@@ -10,7 +10,7 @@
     @include size-weight(14px, 700);
     @include base-link;
     text-transform: uppercase;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     padding-right: 10px;
     position: relative;
     &::before {
@@ -63,10 +63,13 @@
   }
 
   &__subtitle {
+    margin-bottom: 15px;
+  }
+
+  &__link {
     @include size-weight(22px, 700);
     @include active-regular-link($active-regular);
     line-height: normal;
-    padding-bottom: 15px;
   }
 
   &__desc {

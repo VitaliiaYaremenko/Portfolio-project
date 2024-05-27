@@ -5,7 +5,7 @@
 
   &__subtitle {
     @include size-weight(14px, 700);
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
     color: $main-regular;

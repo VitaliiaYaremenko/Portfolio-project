@@ -85,8 +85,11 @@
 
     p+p {
       @include size-weight(14px, 400);
-      margin-top: 6px;
     }
+  }
+
+  &__inner-desc {
+    margin-bottom: 6px;
   }
 
   &__swiper-pagination {
